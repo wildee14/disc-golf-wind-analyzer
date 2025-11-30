@@ -11,7 +11,11 @@ import UIKit
 extension UIView {
     func getBoundsWithoutSafeAreaInsets() -> CGRect {
         let bounds = getCurrentScreenBounds()
-        let safeAreaInsets = ViewController.safeAreaInsets
+        if #available(iOS 16.0, *) {
+            let safeAreaInsets = ViewController.safeAreaInsets
+        } else {
+            // Fallback on earlier versions
+        }
         return CGRect(
             x: 0,
             y: 0,

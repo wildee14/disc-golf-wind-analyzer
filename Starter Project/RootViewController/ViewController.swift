@@ -6,7 +6,9 @@
 //
 
 import UIKit
+import SwiftUI
 
+@available(iOS 16.0, *)
 class ViewController: UIViewController {
     // MARK: Variables
     static let identifier: String = "[ViewController]"
@@ -26,7 +28,9 @@ class ViewController: UIViewController {
         }
     }
     // MARK: UI
-    let customView: CustomUIView = CustomUIView()
+//    let customView: CustomUIView = CustomUIView()
+
+    let customView: ContentView = ContentView()
     var customViewTopConstraint﻿: NSLayoutConstraint?
     var customViewRightConstraint﻿: NSLayoutConstraint?
     var customViewBottomConstraint﻿: NSLayoutConstraint?

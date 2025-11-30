@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+@available(iOS 16.0, *)
 extension ViewController {
     // MARK: Constraints
     func updateConstraints() {
@@ -33,8 +34,9 @@ extension ViewController {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             // Hide and Show Relevant Screens
-            self.customView.isHidden = self.experienceState != .custom
+            self.customViewHostingController?.view.isHidden = self.experienceState != .custom
             // Other Relevant Functionality...
         }
     }
 }
+
