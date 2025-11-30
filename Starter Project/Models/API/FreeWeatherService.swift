@@ -13,7 +13,7 @@ class FreeWeatherService: ObservableObject {
     @Published var isLoading = false
     @Published var error: String?
     
-    private let apiKey = "d1904c2ae1dcfabfbad805a28bd9d0d7"
+    private let apiKey = "api_key"
     private let baseURL = "https://api.openweathermap.org/data/2.5/weather"
     
     func fetchWeather(latitude: Double, longitude: Double) async {
